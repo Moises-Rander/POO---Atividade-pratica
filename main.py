@@ -20,7 +20,7 @@ def datainput():
             print()
         while True:
             name_aux = input(f'Informe o nome da {i+1}ª pessoa: ').strip().capitalize()
-            if name_aux.isalpha():
+            if name_aux.replace(' ', '').isalpha():
                 break
             else:
                 print('Por favor, digite o seu nome utilizando apenas letras.\n')

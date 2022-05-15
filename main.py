@@ -1,7 +1,7 @@
 from person import Person
 
 people = []
-
+list_lenght = int(input('Quantas pessoas serão registradas? '))
 
 def cpfvalidation(cpf):
     if len(cpf) == 11:
@@ -15,11 +15,9 @@ def cpfvalidation(cpf):
 
 
 def datainput():
-    for i in range(3):
-        if i != 0:
-            print()
+    for i in range(list_lenght):
         while True:
-            name_aux = input(f'Informe o nome da {i+1}ª pessoa: ').strip().capitalize()
+            name_aux = input(f'\nInforme o nome da {i+1}ª pessoa: ').strip().capitalize()
             if name_aux.isalpha():
                 break
             else:

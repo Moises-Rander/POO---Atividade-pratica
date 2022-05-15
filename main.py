@@ -9,38 +9,39 @@ while True:
     else:
         print('Por favor, digite um número.')
 
-        
+
 def cpfvalidation(cpf):
     if len(cpf) == 11:
         validador = True
         for i in range(len(cpf)):
             if cpf[i] not in '0123456789':
                 validador = False
+                print('Por favor, digite o seu CPF utilizando apenas números.')
+                break
         return validador
     else:
+        print('Por favor, digite o seu CPF de 11 dígitos.')
         return False
 
 
 def datainput():
     for i in range(list_length):
         while True:
-            name_aux = input(f'\nInforme o nome da {i+1}ª pessoa: ').strip().title()
+            name_aux = input(f'\nInforme o nome da {i + 1}ª pessoa: ').strip().title()
             if name_aux.replace(' ', '').isalpha():
                 break
             else:
-                print('Por favor, digite o seu nome utilizando apenas letras.\n')
+                print('Por favor, digite o seu nome utilizando apenas letras.')
         while True:
-            age_aux = input(f'Informe a idade da {i + 1}ª pessoa: ').replace(' ', '')
+            age_aux = input(f'\nInforme a idade da {i + 1}ª pessoa: ').replace(' ', '')
             if age_aux.isnumeric():
                 break
             else:
-                print('Por favor, digite a sua idade utilizando apenas números.\n')
+                print('Por favor, digite a sua idade utilizando apenas números.')
         while True:
-            cpf_aux = input(f'Informe o CPF da {i+1}ª pessoa: ').replace('.', '').replace('-', '').replace(' ', '')
+            cpf_aux = input(f'\nInforme o CPF da {i + 1}ª pessoa: ').replace('.', '').replace('-', '').replace(' ', '')
             if cpfvalidation(cpf_aux):
                 break
-            else:
-                print('Por favor, digite o seu CPF utilizando apenas números.\n')
         people.append(Person(name_aux, age_aux, cpf_aux))
 
 

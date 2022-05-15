@@ -19,7 +19,7 @@ def datainput():
         if i != 0:
             print()
         while True:
-            name_aux = input(f'Informe o nome da {i+1}ª pessoa: ').strip().capitalize()
+            name_aux = input(f'Informe o nome da {i+1}ª pessoa: ').strip().title()
             if name_aux.replace(' ', '').isalpha():
                 break
             else:

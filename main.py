@@ -22,7 +22,7 @@ def cpfvalidation(cpf):
 
 
 def datainput():
-    for i in range(list_lenght):
+    for i in range(list_length):
         while True:
             name_aux = input(f'\nInforme o nome da {i+1}ª pessoa: ').strip().title()
             if name_aux.replace(' ', '').isalpha():

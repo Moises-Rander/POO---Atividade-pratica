@@ -1,8 +1,15 @@
 from person import Person
 
 people = []
-list_lenght = int(input('Quantas pessoas serão registradas? '))
+while True:
+    list_length = input('Quantas pessoas serão registradas? ')
+    if list_length.isnumeric():
+        list_length = int(list_length)
+        break
+    else:
+        print('Por favor, digite um número.')
 
+        
 def cpfvalidation(cpf):
     if len(cpf) == 11:
         validador = True
